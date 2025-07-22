@@ -34,6 +34,56 @@ const upload = multer({
 // Get all active raffles (public)
 router.get('/public', async (req, res) => {
   try {
+    // Demo mode - return mock data when database is not available
+    if (process.env.SKIP_DB === 'true') {
+      const mockRaffles = [
+        {
+          _id: '507f1f77bcf86cd799439011',
+          title: 'Rifa Audi A4 2024',
+          description: 'Gana este increíble Audi A4 2024 completamente equipado. Participa ahora y podrías ser el afortunado ganador.',
+          carDetails: {
+            brand: 'Audi',
+            model: 'A4',
+            year: 2024,
+            color: 'Blanco Perla',
+            features: ['Navegación GPS', 'Asientos de Cuero', 'Cámara de Reversa', 'Sistema de Audio Premium'],
+            images: []
+          },
+          ticketPrice: 500,
+          totalTickets: 10000,
+          soldTickets: 2450,
+          drawDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString(), // 30 days from now
+          status: 'active',
+          createdAt: new Date().toISOString(),
+          availableTickets: 7550,
+          canPurchase: true
+        },
+        {
+          _id: '507f1f77bcf86cd799439012',
+          title: 'Rifa Toyota Camry Hybrid 2024',
+          description: 'Un elegante Toyota Camry Hybrid 2024 con la mejor tecnología y eficiencia de combustible.',
+          carDetails: {
+            brand: 'Toyota',
+            model: 'Camry Hybrid',
+            year: 2024,
+            color: 'Gris Metálico',
+            features: ['Motor Híbrido', 'Pantalla Táctil', 'Control de Crucero Adaptativo', 'Sensores de Aparcamiento'],
+            images: []
+          },
+          ticketPrice: 400,
+          totalTickets: 8000,
+          soldTickets: 1200,
+          drawDate: new Date(Date.now() + 45 * 24 * 60 * 60 * 1000).toISOString(), // 45 days from now
+          status: 'active',
+          createdAt: new Date().toISOString(),
+          availableTickets: 6800,
+          canPurchase: true
+        }
+      ];
+
+      return res.json(mockRaffles);
+    }
+
     const raffles = await Raffle.find({ 
       status: 'active',
       drawDate: { $gt: new Date() }
