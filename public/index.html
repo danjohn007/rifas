@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería WhatsApp - Pedidos en Línea</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #8B4513;
+            margin: 0;
+        }
+        .whatsapp-button {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+        }
+        .order-button {
+            display: inline-block;
+            background-color: #8B4513;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+        .order-button:hover {
+            background-color: #5D2F0A;
+        }
+        .features {
+            margin: 30px 0;
+        }
+        .feature {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>☕ Cafetería WhatsApp</h1>
+            <p>Pedidos en línea con entrega a domicilio</p>
+        </div>
+
+        <div class="center">
+            <p><strong>¡Haz tu pedido por WhatsApp!</strong></p>
+            
+            <a href="https://wa.me/523334445566?text=Hola,%20quiero%20ver%20el%20menú" class="whatsapp-button">
+                📱 Pedir por WhatsApp
+            </a>
+            
+            <a href="/order" class="order-button">
+                🛒 Ordenar en línea
+            </a>
+        </div>
+
+        <div class="features">
+            <h3>¿Cómo funciona?</h3>
+            
+            <div class="feature">
+                <strong>1. 📱 Contacta por WhatsApp</strong><br>
+                Envía un mensaje y recibirás nuestro menú automaticamente
+            </div>
+            
+            <div class="feature">
+                <strong>2. 🍽️ Selecciona tus productos</strong><br>
+                Elige lo que desees de nuestro menú de cafés, bebidas y comida
+            </div>
+            
+            <div class="feature">
+                <strong>3. 💳 Paga en línea</strong><br>
+                Recibe un enlace de pago seguro por WhatsApp
+            </div>
+            
+            <div class="feature">
+                <strong>4. 📦 Recibe actualizaciones</strong><br>
+                Te notificaremos automáticamente el estado de tu pedido
+            </div>
+        </div>
+
+        <div class="center">
+            <h3>Estados del pedido:</h3>
+            <p>✅ RECIBIDO → 👨‍🍳 EN PREPARACIÓN → 🚶 LISTO → 🍽️ ENTREGADO</p>
+            
+            <p><a href="/history">📋 Ver mi historial de pedidos</a></p>
+            <p><a href="/admin">🔧 Panel de administración</a></p>
+        </div>
+    </div>
+</body>
+</html>
