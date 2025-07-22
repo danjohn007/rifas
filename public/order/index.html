@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Pedido - Cafetería WhatsApp</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <h2>☕ Cafetería WhatsApp</h2>
+            <nav>
+                <a href="/">Inicio</a>
+                <a href="/order">Pedir</a>
+                <a href="/history">Historial</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>🛒 Crear Pedido</h1>
+                <p>Selecciona los productos que deseas ordenar</p>
+            </div>
+
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="phone">📱 Número de WhatsApp</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="+52 33 1234 5678" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">👤 Nombre</label>
+                    <input type="text" id="name" class="form-control" placeholder="Tu nombre" required>
+                </div>
+
+                <h3>📋 Selecciona tus productos:</h3>
+                
+                <div id="products" class="grid grid-3">
+                    <!-- Products will be loaded here -->
+                </div>
+
+                <div id="cart" class="card" style="display: none;">
+                    <h3>🛒 Tu pedido:</h3>
+                    <div id="cartItems"></div>
+                    <div class="text-right">
+                        <strong>Total: $<span id="total">0.00</span> MXN</strong>
+                    </div>
+                </div>
+
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-primary">
+                        ✅ Confirmar Pedido
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/order.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+RewriteEngine On
+
+# Handle Angular and Vue.js routes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/api/
+RewriteRule ^(.*)$ /index.html [QSA,L]
+
+# API routes
+RewriteCond %{REQUEST_URI} ^/api/
+RewriteRule ^api/(.*)$ /api.php [QSA,L]
+
+# WhatsApp webhook
+RewriteRule ^webhook/whatsapp$ /webhook.php [QSA,L]
+
+# Admin routes
+RewriteRule ^admin/(.*)$ /admin.php [QSA,L]
+
+# Public files
+RewriteRule ^public/(.*)$ /$1 [QSA,L]
