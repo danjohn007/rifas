@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Cafetería WhatsApp</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <h2>🔧 Admin - Cafetería WhatsApp</h2>
+            <nav>
+                <a href="/">Inicio</a>
+                <a href="/admin">Dashboard</a>
+                <a href="/admin/products.html">Productos</a>
+                <a href="/admin/orders.html">Pedidos</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>📊 Panel de Administración</h1>
+            <p>Gestiona tu cafetería desde aquí</p>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3>📈 Estadísticas del Día</h3>
+                <div class="grid grid-2">
+                    <div class="text-center">
+                        <h2 style="color: #28a745;">$850.00</h2>
+                        <p>Ventas de Hoy</p>
+                    </div>
+                    <div class="text-center">
+                        <h2 style="color: #8B4513;">12</h2>
+                        <p>Pedidos Recibidos</p>
+                    </div>
+                </div>
+                <div class="grid grid-2">
+                    <div class="text-center">
+                        <h2 style="color: #ffc107;">5</h2>
+                        <p>En Preparación</p>
+                    </div>
+                    <div class="text-center">
+                        <h2 style="color: #17a2b8;">3</h2>
+                        <p>Listos para Entrega</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>🚀 Acciones Rápidas</h3>
+                <div class="grid">
+                    <a href="/admin/products.html" class="btn btn-primary">
+                        📦 Gestionar Productos
+                    </a>
+                    <a href="/admin/orders.html" class="btn btn-success">
+                        📋 Ver Pedidos
+                    </a>
+                    <a href="/admin/reports.html" class="btn btn-warning">
+                        📊 Reportes
+                    </a>
+                    <a href="/admin/customers.html" class="btn btn-info">
+                        👥 Clientes
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>📋 Pedidos Recientes</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Cliente</th>
+                        <th>WhatsApp</th>
+                        <th>Total</th>
+                        <th>Estado</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#1001</td>
+                        <td>María González</td>
+                        <td>+52 33 1234 5678</td>
+                        <td>$85.00</td>
+                        <td><span class="status-badge status-en-preparacion">EN PREPARACIÓN</span></td>
+                        <td>10:30 AM</td>
+                        <td>
+                            <select class="form-control" style="width: auto; display: inline-block;">
+                                <option>RECIBIDO</option>
+                                <option selected>EN_PREPARACION</option>
+                                <option>LISTO</option>
+                                <option>ENTREGADO</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#1002</td>
+                        <td>Carlos Ruiz</td>
+                        <td>+52 33 9876 5432</td>
+                        <td>$45.00</td>
+                        <td><span class="status-badge status-listo">LISTO</span></td>
+                        <td>10:45 AM</td>
+                        <td>
+                            <select class="form-control" style="width: auto; display: inline-block;">
+                                <option>RECIBIDO</option>
+                                <option>EN_PREPARACION</option>
+                                <option selected>LISTO</option>
+                                <option>ENTREGADO</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>#1003</td>
+                        <td>Ana López</td>
+                        <td>+52 33 5555 1234</td>
+                        <td>$125.00</td>
+                        <td><span class="status-badge status-recibido">RECIBIDO</span></td>
+                        <td>11:00 AM</td>
+                        <td>
+                            <select class="form-control" style="width: auto; display: inline-block;">
+                                <option selected>RECIBIDO</option>
+                                <option>EN_PREPARACION</option>
+                                <option>LISTO</option>
+                                <option>ENTREGADO</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h3>🏆 Productos Más Vendidos</h3>
+            <div class="grid grid-3">
+                <div class="product-card">
+                    <h4>☕ Café Americano</h4>
+                    <p><strong>45 vendidos hoy</strong></p>
+                    <p>$25.00 c/u</p>
+                </div>
+                <div class="product-card">
+                    <h4>🥪 Sandwich Club</h4>
+                    <p><strong>28 vendidos hoy</strong></p>
+                    <p>$65.00 c/u</p>
+                </div>
+                <div class="product-card">
+                    <h4>☕ Café Latte</h4>
+                    <p><strong>32 vendidos hoy</strong></p>
+                    <p>$35.00 c/u</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
