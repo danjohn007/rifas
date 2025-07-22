@@ -149,6 +149,6 @@ class OrderController extends Controller
     {
         // This would integrate with Stripe, PayPal, etc.
         // For now, return a mock payment URL
-        return config('app.url') . '/payment/' . $order->id . '?token=' . encrypt($order->id);
+        return config('app.url') . '/payment/' . $order->id . '?token=' . $order->payment_token;
     }
 }
