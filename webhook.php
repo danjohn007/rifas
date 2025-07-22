@@ -13,7 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $verify_token = $_GET['hub_verify_token'] ?? '';
     $challenge = $_GET['hub_challenge'] ?? '';
     
-    if ($verify_token === 'your_verify_token') {
+    $expected_token = getenv('VERIFY_TOKEN');
+    if ($verify_token === $expected_token) {
         echo $challenge;
         exit;
     }
